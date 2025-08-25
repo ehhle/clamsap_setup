@@ -19,7 +19,9 @@ sudo yum -y install clamav-server clamav-data clamav-update clamav-filesystem cl
 
 ### Development tools , e.g. automake , cc, gcc
 sudo yum group install "Development Tools" -y 
+
   -> not all from that needed, but if you can execute gc, gcc and automake try without it
+  
 sudo yum install git -y
 
 ### go to your local directory to build clamsap
