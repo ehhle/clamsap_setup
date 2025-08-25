@@ -16,13 +16,13 @@ You need to create a basis OS with following needed dependencies
 -	gc, automake, etc. (everything you need to to a pure C build)
 -	git (to retrieve clamsap from source repo)
 
-### Start with a RHEL 8 or 9
+1. Start with a RHEL 8 or 9
 
 sudo yum install -y rpmdevtools rpmlint -y
 sudo yum install epel-release -y
 sudo yum -y install clamav-server clamav-data clamav-update clamav-filesystem clamav clamav-scanner-systemd clamav-devel clamav-lib clamav-server-systemd -y
 
-### Development tools , e.g. automake , cc, gcc
+2. Development tools , e.g. automake , cc, gcc
 
 sudo yum group install "Development Tools" -y 
 
@@ -30,7 +30,7 @@ sudo yum group install "Development Tools" -y
   
 sudo yum install git -y
 
-### go to your local directory to build clamsap
+2. go to your local directory to build clamsap
 
 git clone https://git.code.sf.net/p/clamsap/git clamsap-git
 cd clamsap-git/scripts/
@@ -38,7 +38,7 @@ mkdir -p ~/rpmbuild/RPMS/
 ./rpm_build.sh
 
 
-#### Finally test the RPM
+3. Finally test the RPM
 
 cd ~/rpmbuild/RPMS/x86_64/
 sudo rpm -U clamsap-0.104.3-1.x86_64.rpm
