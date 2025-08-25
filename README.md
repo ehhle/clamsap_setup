@@ -2,6 +2,10 @@
 
 ## Linux
 
+### Debian / Ubuntu or other generic Unix systems
+Manual build can be done similar to github action of
+https://github.com/ehhle/clamsap/blob/main/.github/workflows/c-cpp.yml
+
 ### RHEL
 ClamSAP RPM build
 
@@ -40,3 +44,7 @@ cd ~/rpmbuild/RPMS/x86_64/
 sudo rpm -U clamsap-0.104.3-1.x86_64.rpm
 
 you should have  /usr/lib64/libclamsap.so and  /usr/lib64/libclamdsap.so which can be used from all SAP VSI versions, e.g. ABAP, NetWeaver etc.
+
+### SUSE
+ClamSAP on SUSE can installed simply, because there we have a OS level integration.
+See zypper commands, e.g. https://github.com/strehle/clamav_vsi_setup?tab=readme-ov-file#example-setup-for-clamsap-on-sles111215
